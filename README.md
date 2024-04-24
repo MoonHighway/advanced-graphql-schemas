@@ -4,11 +4,12 @@
 
 Welcome everyone! In this repository, you'll find all of the instructions and files for this course.
 
-## Instructor Info
+## Important Info
 
-- Eve Porcello, [Email](eve@moonhighway.com), [Twitter](https://twitter.com/eveporcello)
-- Apollo GraphQL [Website](https://apollographql.com)
+- Instructor: Eve Porcello, [Email](eve@moonhighway.com), [Twitter](https://twitter.com/eveporcello)
 - Moon Highway [Website](https://moonhighway.com)
+- Apollo GraphQL [Website](https://apollographql.com)
+- [Slides](https://slides.com/moonhighway/advanced-graphql-schemas/)
 
 ## Outline
 
