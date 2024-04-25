@@ -1,6 +1,9 @@
-// 1. Import the dependencies at the top of this file
-// 2. Write our resolver functions
-// 3. Build the function that starts the server and creates the subgraph
+import { ApolloServer } from "@apollo/server";
+import { buildSubgraphSchema } from "@apollo/subgraph";
+import { startStandaloneServer } from "@apollo/server/standalone";
+import gql from "graphql-tag";
+
+import dogs from "./dogs.json" assert { type: "json" };
 
 const typeDefs = gql`
   type Dog {
@@ -27,3 +30,22 @@ const resolvers = {
     dogCount: () => dogs.length
   }
 };
+
+const PORT = process.env.PORT || 4002;
+
+async function startApolloServer() {
+  const server = new ApolloServer({
+    schema: buildSubgraphSchema({
+      typeDefs,
+      resolvers
+    })
+  });
+  const { url } = await startStandaloneServer(server, {
+    listen: {
+      port: PORT
+    }
+  });
+  console.log(`Service running at ${url}`);
+}
+
+startApolloServer();
