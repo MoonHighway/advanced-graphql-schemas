@@ -1,3 +1,7 @@
+// 1. Import the dependencies at the top of this file
+// 2. Write our resolver functions
+// 3. Build the function that starts the server and creates the subgraph
+
 const typeDefs = gql`
   type Dog {
     id: ID!
